@@ -6,8 +6,8 @@ const chatId = 672373115
 const bot = new TelegramBot(token, {polling: true});
 
 
-route.get('/send', async (req, res) => {
-  const {message} = req.query
+route.post('/send', async (req, res) => {
+  const {message} = req.body
   await bot.sendMessage(672373115, message)
   res.send()
 })
