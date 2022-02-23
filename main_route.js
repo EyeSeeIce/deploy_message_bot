@@ -7,8 +7,11 @@ const bot = new TelegramBot(token, {polling: true});
 
 
 route.get('/send', async (req, res) => {
-  console.log(req.query)
-  await bot.sendMessage(672373115, 'qwe')
+  const {message} = req.query
+  if (message){
+    await bot.sendMessage(672373115, 'qwe')
+  }
+
   res.send()
 })
 
