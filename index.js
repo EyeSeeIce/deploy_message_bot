@@ -3,7 +3,7 @@ const app = express()
 
 const main_route = require('./main_route')
 
-app.use('/api/', main_route)
+app.use('/', main_route)
 
 
 
