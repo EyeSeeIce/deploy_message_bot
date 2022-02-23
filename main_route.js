@@ -7,8 +7,8 @@ const bot = new TelegramBot(token, {polling: true});
 
 
 route.post('/send', async (req, res) => {
-  const {message} = req.body
-  await bot.sendMessage(672373115, message)
+  console.log(req.body)
+  await bot.sendMessage(672373115, 'qwe')
   res.send()
 })
 
